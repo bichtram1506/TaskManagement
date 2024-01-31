@@ -1,0 +1,347 @@
+.wrapper {
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+
+    .right-icon {
+        font-size: 2.5rem;
+        padding-top: 5px;
+    }
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px 0;
+    background: #fff;
+    gap: 30px;
+}
+
+.month {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+
+    select {
+        padding: 3px 5px;
+        font-size: 1.7rem;
+        font-weight: 600;
+        opacity: 0.6;
+        background: #fff;
+        border-radius: 3px;
+
+        &:focus {
+            outline: 1px solid rgba(0, 0, 0, 0.3);
+        }
+    }   
+
+    p {
+        margin-left: 20px;
+        font-size: 1.7rem;
+        font-weight: 500;
+        opacity: 0.7;
+
+        span {
+            color: var(--primary);
+        }
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 250px;
+
+    .filter-item {
+        position: relative;
+
+        input,
+        select {
+            position: absolute;
+            width: 200px;
+            height: 35px;
+            padding: 0 10px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: 5px;
+            border: 1px solid #afafaf;
+            background: transparent;
+            outline: none;
+            transition: 0.1s ease;
+            z-index: 1111;
+        }
+        
+        .label {
+            position: absolute;
+            padding-top: 5px;
+            font-size: 1.4rem;
+            margin: 0 10px;
+            background-color: #ffffff;
+            transition: 0.2s ergb(173, 24, 24)
+        }
+
+        .label {
+            width: 95px;
+        }
+
+        .name {
+            width: 75px;
+        }
+
+        .name-respon {
+            width: 125px;
+        }
+
+        .name-dv {
+            width: 55px;
+        }
+
+        .date-start {
+            position: absolute;
+            width: 120px;
+            padding: 0 5px;
+            transform: translate(-5px, -12px) scale(0.88);
+            z-index: 1111;
+        }
+
+        .date-end {
+            position: absolute;
+            width: 110px;
+            padding: 0 5px;
+            transform: translate(-5px, -12px) scale(0.88);
+            z-index: 1111;
+        }
+        
+        input:focus,
+        input:valid,
+        select:focus,
+        select:valid {
+            outline: 1.5px solid #0087E1;
+        }
+        
+        input:focus + .label,
+        input:valid + .label,
+        select:focus + .label,
+        select:valid + .label {
+            padding: 0 5px;
+            transform: translate(-5px, -12px) scale(0.88);
+            z-index: 1111;
+        }
+    }
+}
+
+.handle-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .reset-btn {
+        padding: 7px;
+        color: #fff;
+        background:rgb(108, 155, 37);
+        cursor: pointer;
+    
+        &:hover {
+            outline: 1.5px solid rgb(110, 181, 3);
+        }
+    }
+    
+    .add-btn {
+        margin-right: 10px;
+        padding: 6px 8px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 3px;
+        color: #e2e2e2;
+        background: linear-gradient(#27ae60, #1e8449);
+        cursor: pointer;
+    
+        &:hover {
+            background: linear-gradient(#15b357, #0d7d3c);
+            outline: 1.5px solid #0087E1;
+        }
+    }
+
+    .cancel-btn,
+    .save-btn {
+        padding: 7px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 3px;
+        background: none;
+        border: 1px solid #333;
+        cursor: pointer;
+
+        &:hover {
+            outline: 1.5px solid #0087E1;
+        }
+    }
+
+    .cancel-btn {
+        margin-right: 5px;
+        background: rgb(227, 227, 227);
+    }
+}
+  
+.inner {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        color: var(--text-white);
+        font-size: 1.6rem;
+        background: #0087E1;
+    }
+
+    span {
+        padding-right: 5px;
+    }
+
+    .icon {
+        font-size: 1.4rem;
+    }
+
+    td {
+        font-size: 1.4rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        input,
+        textarea,
+        select  {
+            width: auto;
+            height: 40px;
+            font-size: 1.4rem;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            outline: none;
+
+            &:hover {
+                outline: 1px solid rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+
+    td:first-child {
+        font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+        background: #f4f4f4;
+    }
+
+    tbody tr:hover {
+        background-color: #abccf130;
+    }
+}
+
+.handle {
+    padding: 7px;
+    font-size: 1.6rem;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+        background: #e2e2e2;
+        border-radius: 50%;
+    }
+}
+
+.edit-btn {
+    color: #2400FF;
+}
+
+.delete-btn {
+    color: var(--primary);
+}
+
+.save-btn {
+    color: #0d7d3c;
+}
+
+.cancle-btn {
+    font-size: 2.0rem;
+    color: rgb(137, 137, 137);
+}
+
+.paginate {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+    padding-bottom: 20px;
+
+    .pagination {
+        display: flex;
+    
+        li {
+            margin-right: 5px;
+    
+            a {
+                padding: 3px 8px;
+                font-size: 1.4rem;
+                color: var(text-black);
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.active {
+    color: var(--text-white);
+    background: #0087E1;
+}
+
+.no-result-bchn {
+    td {
+        font-size: 1.8rem;
+        padding: 40px 20px;
+    }
+}
+
+.no-result {
+    font-size: 1.8rem;
+    padding: 40px 20px;
+}
+
+.tham-dinh {
+    color: #15b357;
+}
